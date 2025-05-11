@@ -1,0 +1,231 @@
+
+
+
+
+
+
+
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 2 em;
+  padding: 0 em;
+  background: #f9f9f9;
+  color: #333;
+}
+
+
+ nav, footer {
+  background-color: #003366;
+  color: white;
+  padding: 1em;
+  text-align: center;
+}
+
+main, header {
+  padding: 2em !important;
+}
+/* Navbar styles */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 0.5em 1em;
+  height: 3em; /* Limits vertical height */
+}
+
+.nav-left img {
+  height: 60px;
+}
+
+.nav-right a {
+  color: #003366;
+  margin-left: 1em;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-right a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+h1 {
+  margin:0px;
+  color: #003366;
+  
+}
+
+.member {
+  margin: 1em 0;
+  padding: 1em;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.member img {
+  width: 100px;
+  float: left;
+  margin-right: 1em;
+}
+
+footer {
+  margin-top: 1em;
+}
+
+/* Container holding the images */
+.image-container {
+  display: flex;
+  padding: 0;  /* Removes any padding */
+  margin: 0;   /* Removes any margin */
+  width: 100%; /* Makes the container take the full width */
+}
+
+/* Images inside the container */
+.image-container img {
+  width: 33.33%;  /* Each image will take up one-third of the width */
+  height: auto;   /* Keep the images proportional */
+  object-fit: cover; /* Ensures the images cover the space without stretching */
+  border-radius: 0; /* Optional: no rounded corners */
+}
+
+/* Title below images */
+.remac-title {
+  font-size: 2em;        /* Make the title larger */
+  text-align: left;    /* Center the title */
+  color: #003366;        /* REMAC branding color */
+  margin-top: 1em;       /* Space between images and the title */
+  font-weight: bold;     /* Make the title bold */
+}
+
+/* Styling for the three titles section */
+.three-titles {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2em; /* Adds some space between the main content and this section */
+}
+
+.title-box {
+  width: 30%;        /* Each box takes up 30% of the space */
+  padding: 1em;      /* Padding inside each box */
+  background-color: #f2f2f2; /* Light background color for each box */
+  border-radius: 8px; /* Optional: rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for a 3D effect */
+}
+
+.title-box h3 {
+  font-size: 1.5em;   /* Make titles a bit larger */
+  color: #003366;     /* Title color to match branding */
+  margin-bottom: 0.5em;
+}
+
+.title-box p {
+  font-size: 1em;
+  color: #333333;     /* Dark gray text for content */
+  line-height: 1.5;    /* Improve readability */
+}
+
+
+/* Style for the contact section */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Aligns content to the left */
+  padding: 2em;
+  max-width: 900px; /* Optional: limits the width of the contact section */
+  margin-left: 0; /* Optional: ensures content starts from the left side */
+}
+
+.contact-person {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2em;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1em;
+  width: 100%;
+}
+
+.contact-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 2em;
+}
+
+.contact-details p {
+  font-size: 1.1em;
+  margin: 0.5em 0;
+}
+
+.contact-details a {
+  color: #0056b3;
+  text-decoration: none;
+}
+
+.contact-details a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  padding: 1em;
+  background-color: #f8f9fa;
+  font-size: 0.9em;
+  color: #777;
+}
+.members-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  padding: 2em;
+}
+
+.member-card {
+  flex: 1 1 300px;
+  border: 1px solid #ddd;
+  padding: 1em;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.member-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1em;
+}
+
+.member-info {
+  font-size: 0.9em;
+}
+
+.member-info strong {
+  font-size: 1.1em;
+  color: #333;
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+.member-info a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.member-info a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .member-card {
+    flex: 1 1 100%; /* On smaller screens, make each member card take full width */
+  }
+}
