@@ -25,18 +25,70 @@
  <main>
   <div class="members-container">
 
-    <div class="member-card">
+<div class="member-filters">
+
+    <div class="filter-group">
+        <h3>Academic Position</h3>
+        <button class="filter-btn active"
+                onclick="setFilter('position', 'all', this)">
+            All
+        </button>
+        <button class="filter-btn"
+                onclick="setFilter('position', 'prof', this)">
+            Professor
+        </button>
+        <button class="filter-btn"
+                onclick="setFilter('position', 'assocprof', this)">
+            Associate Professor
+        </button>
+        <button class="filter-btn"
+                onclick="setFilter('position', 'assisprof', this)">
+            Assistant Professor
+        </button>
+        <button class="filter-btn"
+                onclick="setFilter('position', 'postdoc', this)">
+            Postdoc
+        </button>
+        <button class="filter-btn"
+                onclick="setFilter('position', 'phd', this)">
+            PhD
+        </button>
+        <button class="filter-btn"
+                onclick="setFilter('position', 'ra', this)">
+            Research Assistant
+        </button>
+    </div>
+
+    <div class="filter-group">
+        <h3>Expertise</h3>
+        <button class="filter-btn active"
+                onclick="setFilter('expertise', 'all', this)">
+            All
+        </button>
+        <button class="filter-btn"
+                onclick="setFilter('expertise', 'design', this)">
+            Design
+        </button>
+        <button class="filter-btn"
+                onclick="setFilter('expertise', 'modeling', this)">
+            Modeling
+        </button>
+    </div>
+
+</div>
+
+    <div class="member-card" data-position="prof">
       <img src="janna.jpg" alt="Janna Vrijsen">
       <div class="member-info">
         <strong>Janna Vrijsen</strong><br>
         Co-lead REMAC<br>
-        Associate Professor, RUMC/Donders<br>
+        Professor, RUMC/Donders<br>
         Cognitive bias and depression<br>
         <a href="mailto:janna.vrijsen@radboudumc.nl">janna.vrijsen@radboudumc.nl</a>
       </div>
     </div>
 
-    <div class="member-card">
+    <div class="member-card" data-position="prof">
       <img src="rogier.jpg" alt="Rogier Kievit">
       <div class="member-info">
         <strong>Rogier Kievit</strong><br>
@@ -47,11 +99,10 @@
       </div>
     </div>
     
-    <div class="member-card">
+    <div class="member-card" data-position="postdoc">
       <img src="jessica.jpg" alt="Jessica Schaaf">
       <div class="member-info">
         <strong>Jessica Schaaf</strong><br>
-	<button>Models</button><br><br>
 	Co-organizer REMAC<br>
         Postdoc, Donders/RUMC<br>
         Learning<br>
@@ -59,7 +110,7 @@
       </div>
     </div>
     
-    <div class="member-card">
+    <div class="member-card" data-position="phd">
       <img src="Renee .png" alt="Renee Roosen">
       <div class="member-info">
         <strong>Renee Roosen</strong><br>
@@ -70,7 +121,7 @@
       </div>
     </div>
 
-    <div class="member-card">
+    <div class="member-card" data-position="phd">
       <img src="blank-picture.png" alt="Zeynep Koyuncu">
       <div class="member-info">
         <strong>Zeynep Koyuncu</strong><br>
@@ -81,17 +132,17 @@
       </div>
     </div>
 
-    <div class="member-card">
+    <div class="member-card" data-position="phd">
       <img src="aran.jpg" alt="Aran van Hout">
       <div class="member-info">
         <strong>Aran van Hout</strong><br>
-        Research Assistant, Donders<br>
+        PhD Candidate, Donders<br>
         Cognitive Dynamics<br>
         <a href="mailto:aran.vanhout@ru.nl">aran.vanhout@ru.nl</a>
       </div>
     </div>
 
-    <div class="member-card">
+    <div class="member-card" data-position="assisprof">
       <img src="loes.jpg" alt="Loes Pouwels">
       <div class="member-info">
         <strong>Loes Pouwels</strong><br>
@@ -101,17 +152,17 @@
       </div>
     </div>
 
-    <div class="member-card">
+    <div class="member-card" data-position="postdoc">
       <img src="edmund.jpg" alt="Edmund Lo">
       <div class="member-info">
         <strong>Edmund Lo</strong><br>
-        PhD Student, RU/BSI<br>
+        Postdoc, RU/BSI<br>
         Emotion differentiation and regulation<br>
         <a href="mailto:edmund.lo@ru.nl">edmund.lo@ru.nl</a>
       </div>
     </div>
 
-    <div class="member-card">
+    <div class="member-card" data-position="postdoc">
       <img src="merlijn.jpg" alt="Merlijn Olthof">
       <div class="member-info">
         <strong>Merlijn Olthof</strong><br>
@@ -121,7 +172,7 @@
       </div>
     </div>
 
-    <div class="member-card">
+    <div class="member-card" data-position="phd">
       <img src="suhaavi.jpg" alt="Suhaavi Kochhar">
       <div class="member-info">
         <strong>Suhaavi Kochar</strong><br>
@@ -131,7 +182,7 @@
       </div>
     </div>
 
-    <div class="member-card">
+    <div class="member-card" data-position="assisprof">
       <img src="eliana.jpg" alt="Eliana Vassena">
       <div class="member-info">
         <strong>Eliana Vassena</strong><br>
@@ -141,17 +192,7 @@
       </div>
     </div>
 
-    <div class="member-card">
-      <img src="bertalan.jpg" alt="Bertalan Polner">
-      <div class="member-info">
-        <strong>Bertalan Polner</strong><br>
-        Postdoc, Donders<br>
-        Learning and decision-making<br>
-        <a href="mailto:bertalan.polner@donders.ru.nl">bertalan.polner@donders.ru.nl</a>
-      </div>
-    </div>
-
-    <div class="member-card">
+    <div class="member-card" data-position="phd">
       <img src="bob.jpg" alt="Bob Baxendell">
       <div class="member-info">
         <strong>Bob Baxendell</strong><br>
@@ -161,7 +202,7 @@
       </div>
     </div>
 
-    <div class="member-card">
+    <div class="member-card" data-position="postdoc">
       <img src="sophie.jpg" alt="Sophie Bogemann">
       <div class="member-info">
         <strong>Sophie Bogemann</strong><br>
@@ -171,7 +212,7 @@
       </div>
     </div>
 	  
-    <div class="member-card">
+    <div class="member-card" data-position="phd">
       <img src="alessio.jpg" alt="Alessio Proposito">
       <div class="member-info">
         <strong>Alessio Proposito</strong><br>
@@ -181,7 +222,7 @@
       </div>
     </div>
 
-    <div class="member-card">
+    <div class="member-card" data-position="postdoc">
       <img src="florian.jpg" alt="Florian Krause">
       <div class="member-info">
         <strong>Florian Krause</strong><br>
@@ -191,7 +232,7 @@
       </div>
     </div>
 
-    <div class="member-card">
+    <div class="member-card" data-position="assisprof">
       <img src="anna.jpg" alt="Anna Tyborowska">
       <div class="member-info">
         <strong>Anna Tyborowska</strong><br>
@@ -201,7 +242,7 @@
       </div>
     </div>
 
-    <div class="member-card">
+    <div class="member-card" data-position="postdoc">
       <img src="maurits.jpg" alt="Maurits Masselink">
       <div class="member-info">
         <strong>Maurits Masselink</strong><br>
@@ -211,17 +252,7 @@
       </div>
     </div>
 
-    <div class="member-card">
-      <img src="imogen.jpg" alt="Imogen Leaning">
-      <div class="member-info">
-        <strong>Imogen Leaning</strong><br>
-        PhD Student, Donders<br>
-        Predictive clinical neuroscience<br>
-        <a href="mailto:imogen.leaning@donders.ru.nl">imogen.leaning@donders.ru.nl</a>
-      </div>
-    </div>
-
-    <div class="member-card">
+    <div class="member-card" data-position="assisprof">
       <img src="fred.jpg" alt="Fred Hasselman">
       <div class="member-info">
         <strong>Fred Hasselman</strong><br>
@@ -231,17 +262,7 @@
       </div>
     </div>
 
-    <div class="member-card">
-      <img src="loran.jpg" alt="Loran Knol">
-      <div class="member-info">
-        <strong>Loran Knol</strong><br>
-        PhD Student, Donders<br>
-        Digital phenotyping<br>
-        <a href="mailto:loran.knol@donders.ru.nl">loran.knol@donders.ru.nl</a>
-      </div>
-    </div>
-
-    <div class="member-card">
+    <div class="member-card" data-position="phd">
       <img src="iliana.jpg" alt="Iliana Liakea">
       <div class="member-info">
         <strong>Iliana Liakea</strong><br>
@@ -251,7 +272,7 @@
       </div>
     </div>
 
-    <div class="member-card">
+    <div class="member-card" data-position="assocprof">
       <img src="erik.jpg" alt="Erik Bijleveld">
       <div class="member-info">
         <strong>Erik Bijleveld</strong><br>
@@ -261,7 +282,7 @@
       </div>
     </div>
 
-    <div class="member-card">
+    <div class="member-card" data-position="prof">
       <img src="erno.jpg" alt="Erno Hermans">
       <div class="member-info">
         <strong>Erno Hermans</strong><br>
@@ -271,7 +292,7 @@
       </div>
     </div>
 
-    <div class="member-card">
+    <div class="member-card" data-position="prof">
       <img src="andre.jpg" alt="Andre Marquand">
       <div class="member-info">
         <strong>Andre Marquand</strong><br>
@@ -281,9 +302,7 @@
       </div>
     </div>
 
-   
-
-    <div class="member-card">
+    <div class="member-card" data-position="assisprof">
       <img src="rene.jpg" alt="René Melis">
       <div class="member-info">
         <strong>René Melis</strong><br>
@@ -295,7 +314,7 @@
 
     
 
-    <div class="member-card">
+    <div class="member-card" data-position="prof">
       <img src="marcel.jpg" alt="Marcel Olde Rikkert">
       <div class="member-info">
         <strong>Marcel Olde Rikkert</strong><br>
@@ -305,17 +324,17 @@
       </div>
     </div>
 
-    <div class="member-card">
+    <div class="member-card" data-position="prof">
       <img src="hanneke.jpg" alt="Hanneke den Ouden">
       <div class="member-info">
         <strong>Hanneke den Ouden</strong><br>
-        Associate Professor, Donders<br>
+        Professor, Donders<br>
         Learning and decision-making<br>
         <a href="mailto:hanneke.denouden@donders.ru.nl">hanneke.denouden@donders.ru.nl</a>
       </div>
     </div>
 
-    <div class="member-card">
+    <div class="member-card" data-position="phd">
       <img src="fleur.jpeg" alt="Fleur Smilde">
       <div class="member-info">
         <strong>Fleur Smilde</strong><br>
@@ -325,7 +344,7 @@
       </div>
     </div>
 
-    <div class="member-card">
+    <div class="member-card" data-position="postdoc">
       <img src="marieke.jpg" alt="Marieke Helmich">
       <div class="member-info">
         <strong>Marieke Helmich</strong><br>
@@ -335,7 +354,7 @@
       </div>
     </div>
 
-    <div class="member-card">
+    <div class="member-card" data-position="postdoc">
       <img src="nina.png" alt="Nina van den Broek">
       <div class="member-info">
         <strong>Nina van den Broek</strong><br>
@@ -345,7 +364,7 @@
       </div>
     </div>
 
-    <div class="member-card">
+    <div class="member-card" data-position="phd">
       <img src="marvin.jpeg" alt="Marvin Dophemont">
       <div class="member-info">
         <strong>Marvin Dophemont</strong><br>
@@ -355,7 +374,7 @@
       </div>
     </div>
 
-    <div class="member-card">
+    <div class="member-card" data-position="phd">
       <img src="bram.jpg" alt="Bram Meijer">
       <div class="member-info">
         <strong>Bram Meijer</strong><br>
@@ -365,7 +384,7 @@
       </div>
     </div>
 
-    <div class="member-card">
+    <div class="member-card" data-position="postdoc">
       <img src="anouk.jpg" alt="Anouk Vroegindeweij">
       <div class="member-info">
         <strong>Anouk Vroegindeweij</strong><br>
@@ -375,17 +394,7 @@
       </div>
     </div>
 
-    <div class="member-card">
-      <img src="aline.jpg" alt="Aline Korver">
-      <div class="member-info">
-        <strong>Aline Korver</strong><br>
-        PhD/research assistant, Donders/RUMC (& RuG)<br>
-        Cognitive dynamics<br>
-        <a href="mailto:a.h.korver@rug.nl">a.h.korver@rug.nl</a>
-      </div>
-    </div>
-
-    <div class="member-card">
+    <div class="member-card" data-position="postdoc">
       <img src="Kirsten.jpg" alt="Kirsten van Hooijdonk">
       <div class="member-info">
         <strong>Kirsten van Hooijdonk</strong><br>
@@ -395,7 +404,7 @@
       </div>
     </div>
 
-    <div class="member-card">
+    <div class="member-card" data-position="phd">
       <img src="AniekSchrauwen.jpeg" alt="Aniek Schrauwen">
       <div class="member-info">
         <strong>Aniek Schrauwen</strong><br>
@@ -405,7 +414,7 @@
       </div>
     </div>
 
-    <div class="member-card">
+    <div class="member-card" data-position="phd">
       <img src="blank-picture.png" alt="Colin Schoenaker">
       <div class="member-info">
         <strong>Colin Schoenaker</strong><br>
@@ -415,7 +424,7 @@
       </div>
     </div>
 
-    <div class="member-card">
+    <div class="member-card" data-position="phd">
       <img src="jade.jfif" alt="Jade Kraan">
       <div class="member-info">
         <strong>Jade Kraan</strong><br>
@@ -425,7 +434,7 @@
       </div>
     </div>
 
-    <div class="member-card">
+    <div class="member-card" data-position="assocprof">
       <img src="blank-picture.png" alt="Martin Dresler">
       <div class="member-info">
         <strong>Martin Dresler</strong><br>
@@ -435,7 +444,7 @@
       </div>
     </div>
 
-    <div class="member-card">
+    <div class="member-card" data-position="assisprof">
       <img src="giesje nefs.jpg" alt="Giesje Nefs">
       <div class="member-info">
         <strong>Giesje Nefs</strong><br>
@@ -445,7 +454,7 @@
       </div>
     </div>
 
-    <div class="member-card">
+    <div class="member-card" data-position="postdoc">
       <img src="micheleschmitter.jpg" alt="Michele Schmitter">
       <div class="member-info">
         <strong>Michele Schmitter</strong><br>
@@ -455,7 +464,7 @@
       </div>
     </div>
 
-    <div class="member-card">
+    <div class="member-card" data-position="postdoc">
       <img src="Farnaz.jpg" alt="Farnaz Mosannenzadeh">
       <div class="member-info">
         <strong>Farnaz Mosannenzadeh</strong><br>
@@ -473,7 +482,7 @@
  <main>
   <div class="members-container">
 
-    <div class="member-card">
+    <div class="member-card" data-position="postdoc">
       <img src="anika.jpg" alt="Anika Poppe">
       <div class="member-info">
         <strong>Anika Poppe</strong><br>
@@ -483,7 +492,7 @@
       </div>
     </div>
     
-    <div class="member-card">
+    <div class="member-card" data-position="postdoc">
       <img src="ilse.jpg" alt="Ilse Coolen">
       <div class="member-info">
         <strong>Ilse Coolen</strong><br>
@@ -492,7 +501,7 @@
       </div>
     </div>
 
-    <div class="member-card">
+    <div class="member-card" data-position="phd">
       <img src="michael.jpg" alt="Michael Aristodemou">
       <div class="member-info">
         <strong>Michael Aristodemou</strong><br>
@@ -501,10 +510,101 @@
       </div>
     </div>
 
+    <div class="member-card" data-position="postdoc">
+      <img src="bertalan.jpg" alt="Bertalan Polner">
+      <div class="member-info">
+        <strong>Bertalan Polner</strong><br>
+        Postdoc, Donders<br>
+        Learning and decision-making<br>
+        <a href="mailto:bertalan.polner@donders.ru.nl">bertalan.polner@donders.ru.nl</a>
+      </div>
+    </div>
+
+    <div class="member-card" data-position="phd">
+      <img src="imogen.jpg" alt="Imogen Leaning">
+      <div class="member-info">
+        <strong>Imogen Leaning</strong><br>
+        PhD Student, Donders<br>
+        Predictive clinical neuroscience<br>
+        <a href="mailto:imogen.leaning@donders.ru.nl">imogen.leaning@donders.ru.nl</a>
+      </div>
+    </div>
+
+    <div class="member-card" data-position="phd">
+      <img src="loran.jpg" alt="Loran Knol">
+      <div class="member-info">
+        <strong>Loran Knol</strong><br>
+        PhD Student, Donders<br>
+        Digital phenotyping<br>
+        <a href="mailto:loran.knol@donders.ru.nl">loran.knol@donders.ru.nl</a>
+      </div>
+    </div>
+
+    <div class="member-card" data-position="ra">
+      <img src="aline.jpg" alt="Aline Korver">
+      <div class="member-info">
+        <strong>Aline Korver</strong><br>
+        Research assistant, Donders/RUMC<br>
+        Cognitive dynamics<br>
+        <a href="mailto:a.h.korver@rug.nl">a.h.korver@rug.nl</a>
+      </div>
+    </div>
+
   </div>
 </main>
 
+<script>
+let selectedPosition = 'all';
+let selectedExpertise = 'all';
 
-  <footer>&copy; 2025 REMAC</footer>
+function setFilter(type, value, button) {
+
+    if (type === 'position') {
+        selectedPosition = value;
+    }
+
+    if (type === 'expertise') {
+        selectedExpertise = value;
+    }
+
+    // Update active button in the relevant group
+    const group = button.closest('.filter-group');
+
+    group.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+
+    button.classList.add('active');
+
+    filterMembers();
+}
+
+function filterMembers() {
+
+    const members = document.querySelectorAll('.member-card');
+
+    members.forEach(member => {
+
+        const position = member.dataset.position;
+        const expertise = member.dataset.expertise;
+
+        const positionMatch =
+            selectedPosition === 'all' ||
+            position === selectedPosition;
+
+        const expertiseMatch =
+            selectedExpertise === 'all' ||
+            expertise === selectedExpertise;
+
+        member.style.display =
+            positionMatch && expertiseMatch ? '' : 'none';
+
+    });
+
+}
+</script>
+
+
+  <footer>&copy; 2026 REMAC</footer>
 </body>
 </html>
